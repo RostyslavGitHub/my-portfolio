@@ -5,6 +5,9 @@ $main-bg-color: #f8f8f8;
 $main-text-color: #212121;
 $main-marker-color: #035956;
 
+html {
+  scroll-behavior: smooth;
+}
 body{
 	font-family: 'Rubik', sans-serif;
 	font-size: 18px;
@@ -28,6 +31,8 @@ body{
 .--green-marker{
 	color: $main-marker-color;
 }
+
+
 /* HEADER */
 
 .header {
@@ -41,20 +46,21 @@ body{
 .header__nav {
 	position: relative;
 	right: -100%;
-  min-height: 100vh;//auto;
-	background-color: $main-bg-color;
+  	min-height: 100vh;	
 	display: flex;
 	flex-direction: column;
-	justify-content: start; //end;
+	justify-content: start;
 	align-items: start;
 	flex-wrap: wrap;
 	background-color: $main-bg-color;
+	border-bottom: 2px solid grey;
 	padding-top: 60px;
 	opacity: 0.5;
 	visibility: hidden;
 	transition: 0.8s;
 }
 .header__nav__link {
+	background-color: $main-bg-color;
 	margin: 0 10px;
 	padding: 30px 10px;
 	cursor: pointer;
@@ -101,6 +107,22 @@ body{
 	transition: 0.5s;
 }
 
+@media (min-width: 699px) {
+	.header__nav{
+		visibility: visible;
+		opacity: 1;
+		right: 0;
+		min-height: auto;
+		flex-direction: row;
+		justify-content: end;
+		align-items: start;
+		padding-top: 0px;
+	}
+	.header__burger-menu{
+		visibility: hidden;
+		opacity: 0;
+	}
+}
 
 /* ABOUT */
 
@@ -119,20 +141,32 @@ body{
 	border-radius: 1%;
 	margin-bottom: 40px;
 }
+.about__img-n-mail{
+	display: flex;
+	flex-direction: column;
+}
+.about__mail {
+	
+	position: relative;
+	bottom: 25px;
+}	
+.mail{
+	font-size: 12px;
+	color: $main-text-color;
+
+}
+.mail:hover{
+	text-decoration: underline;
+	color: $main-marker-color;
+}
 .about__info {
 	width: 100%;
 	line-height: 1.2;
 	margin: 25px 0;
-	
 }
 .about__info__marker {
 	font-size: 24px;
 	color: $main-marker-color;
-}
-.about__contacts__row {
-	/* display: flex;
-	align-items: center;
-	justify-content: space-between; */
 }
 .about__contacts__icons{
 	.about__contact-item:hover{
@@ -146,20 +180,45 @@ body{
 	padding: 4px;
 	margin: 0 10px 0 1px;
 }
-.about__contact__mail {
-	font-size: 12px;
-	position: relative;
-	bottom: 64px;
-	color: $main-text-color;
+
+
+@media (max-height: 580px) and (min-width: 699px) {
+	.about{
+		margin-top: 60px;
+	}
 }
-.about__contact__mail:hover{
-	text-decoration: underline;
-	color: $main-marker-color;
+@media (min-width: 699px) {
+	.about {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+}
+@media (min-width: 1100px){
+	.about__person-img{
+		width: 350px;
+		height: 350px;
+	}
+	.mail{
+		font-size: 16px;
+	}
+	.about__info{
+		font-size: 30px;
+	}
+	.about__info__marker{
+		font-size: 34px;
+	}
+	.about__contact-item{
+		margin: 10px 10px 0 1px;
+		width: 40px;
+	}
 }
 
 /* SKILLS */
 
-.skils {
+.skills {
 	min-height: 100vh;
 	padding: 40px 0;
 	display: flex;
@@ -167,7 +226,7 @@ body{
 	justify-content: center;
 	border-bottom: 2px solid grey;
 }
-.skils__row {
+.skills__row {
 	margin-top: 15px;
 	display: flex;
 	flex-wrap: wrap;
@@ -299,27 +358,29 @@ body{
 	margin-right: 8px; 
 }
 
-/* PRPJECTS */
+/* PROJECTS */
 
 .projects {
 	min-height: 100vh;
 	padding: 40px 0;
-	border-bottom: 2px solid grey;
-
-	
+	border-bottom: 2px solid grey;	
 }
 .projects__title {
 	margin-bottom: 20px;
 }
 .projects__row{
+	width: 100%;
 	min-height: 70vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-wrap: wrap;
 	}
 .projects__item {
+	display: flex;
+  	flex-direction: column;
 	width: 90%;
-	height: auto;
+	min-height: 410px;
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0.5px 0.5px 3px 0.5px $main-marker-color;
@@ -337,13 +398,17 @@ body{
 	}
 	margin-bottom: 16px;
 }
+.projects__item__description{
+
+}
 .projects__item__buttons__row {
+	margin-top: auto;
 	display: flex;
 	justify-content: center;
 }
 .projects__item__button {
 	margin: 16px 30px 10px 30px;
-	width: 80px;
+	min-width: 80px;
 	height: 40px;
 	background-color: $main-marker-color;
 	color: $main-bg-color;
@@ -354,6 +419,26 @@ body{
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
+@media (min-width: 699px){
+	.projects__item{
+		width: 400px;
+		margin: 5% 20px 40px 20px;
+	}.projects__row{
+		flex-direction: row;
+	}
+}
+@media (min-width: 1200px) {
+	.projects__item{
+		width: 40%;
+		margin: 5% 5% 40px 5%;
+	}
+}
+@media (min-width: 2000px){
+	.projects__item{
+		width: 40%;
+		max-width: 40%;
+	}
+}
 
 /* CONTACT FORM */
 
@@ -363,12 +448,27 @@ body{
 	border-bottom: 2px solid grey;
 	font-size: 20px;
 	padding: 40px 0;
+		h2{
+			margin-bottom: 10px;
+		}
+}
+.contact-form__info{
+	margin-right: 20px;
 }
 .contact-form__container{
 	min-height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+.contact-form__info__mail-me{
+	font-size: 16px;
+	margin: 40px 0; 
+	color: grey;
+}
+.contact-form__mail{
+	font-size: 12px;
+	color: $main-marker-color;
 }
 .contact-form__body {
 	height: 400px;
@@ -385,8 +485,10 @@ body{
 		border-bottom: 2px solid $main-marker-color;
 		color: $main-bg-color;
 		max-width: 100%;
+		min-width: 100%;
 		height: 60px;
 		line-height: 1.2;
+		overflow: auto;
 }
 .contact-form__body__inputs {
 		background-color: $main-text-color;
@@ -408,7 +510,22 @@ body{
 	padding: 10px 0;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
 
+@media (min-width: 699px) {
+	.contact-form{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.contact-form__body{
+		min-width: 400px;
+	}
+}
+@media (min-width: 1100px){
+	.contact-form__body{
+		width: 700px;
+	}
 }
 
 /* FOOTER */
@@ -446,4 +563,33 @@ body{
 }
 ._stop-scroll{
 	overflow: hidden;
+}
+
+/* MEDIA */
+@media (min-width: 699px) {
+	.--on-mobile{
+		display: none;
+	}
+	.--on-pc{
+		display: block;
+	}
+}
+@media (max-width: 699px) {
+	.--on-mobile{
+		display: block;
+
+	}
+	.--on-pc{
+		display: none;	}
+}
+@media (min-height: 899px){
+	.about, .skills, .contact-form, .contact-form__container {
+		min-height: 70vh;
+	}
+}
+@media (min-width: 1100px){
+	.title{
+		margin-top: 20px;
+		font-size: 30px;
+	}
 }

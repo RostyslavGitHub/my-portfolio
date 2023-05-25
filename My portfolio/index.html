@@ -3,7 +3,7 @@
 	<head>
 		<title>Rostyslav's Portfolio</title>
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="">
+		<link rel="icon" href="img/icons/like.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 	</head>
@@ -26,21 +26,25 @@
 	</header>
 	<div class="about">		
 		<div class="about__info">
-			<h1 class="title">Hi! I'm Rostyslav. <br>
-			And I'm <span class="about__info__marker">a front-end developer</span>.</h1>
+			<h1>Hi! I'm Rostyslav Zhyravel. <br>
+			And I'm <span class="about__info__marker">a front-end developer</span> from Ukraine.</h1>
+			<div class="about__contacts__icons --on-pc">
+			<a href="https://t.me/rostislavfff" target="_blank"><img src="img/icons/telegram.svg" alt="" class="about__contact-item"></a>
+			<a href="https://github.com/RostyslavGitHub" target="_blank"><img src="img/icons/github-sign.svg" alt="" class="about__contact-item"></a>
 		</div>
-		<img src="img/about__person-img.jpg" alt="" class="about__person-img">
-		<div class="about__contacts__row">
-			<div class="about__contacts__icons">
-				<a href=""><img src="img/icons/telegram.svg" alt="" class="about__contact-item"></a>
-				<a href=""><img src="img/icons/github-sign.svg" alt="" class="about__contact-item"></a>
-			</div>
-			<a href="" class="about__contact__mail">forwork.rostislav@gmail.com</a>
+		</div>
+		<div class="about__img-n-mail">
+			<img src="img/about__person-img.jpg" alt="" class="about__person-img">
+			<a href="mailto:forwork.rostislav@gmail.com" class="about__mail mail">forwork.rostislav@gmail.com</a>
+		</div>
+		<div class="about__contacts__icons --on-mobile">
+			<a href="https://t.me/rostislavfff" target="_blank"><img src="img/icons/telegram.svg" alt="" class="about__contact-item"></a>
+			<a href="https://github.com/RostyslavGitHub" target="_blank"><img src="img/icons/github-sign.svg" alt="" class="about__contact-item"></a>
 		</div>
 	</div>
-	<div class="skils">
+	<div class="skills">
 		<h2 class="title">My set of <span class="--green-marker">skills</span></h2>
-		<ul class="skils__row">
+		<ul class="skills__row">
 			<li class="skills__item">Proficient in <span class="--green-marker">HTML, CSS, JavaScript</span></li>
 			<li class="skills__item">Have beginer experience with front-end frameworks such as <span class="--green-marker">React</span></li>
 			<li class="skills__item">Understanding of <span class="--green-marker">responsive design principles</span></li>
@@ -60,21 +64,6 @@
 		</h1>
 
 		<div class="projects__row">
-			<div class="projects__item">
-				<h2 class="projects__item__title">
-					<a href="https://warwebarchive.netlify.app/" target="_blank">Webarchive of the war in Ukraine</a> / <a href="https://github.com/RostyslavGitHub/Web-Archive-of-the-War" target="_blank">Web-Archive-of-the-War</a>
-				</h2>
-				<p class="projects__item__last-update">
-					Last updated on <span class="--green-marker">May 1, 2023</span>.
-				</p>
-
-				<p class="projects__item__description">This project is an addition to a research paper exploring the role of web archives in information resource services during Russia's war against Ukraine. Its goal is to investigate web archive capabilities and highlight the digital heritage of the conflict.</p>
-
-				<div class="projects__item__buttons__row">
-					<a href="https://warwebarchive.netlify.app/" target="_blank" class="projects__item__button">Site</a>
-					<a href="https://github.com/RostyslavGitHub/Web-Archive-of-the-War" target="_blank" class="projects__item__button">Code</a>
-				</div>
-			</div>
 
 			<div class="projects__item">
 				<h2 class="projects__item__title">
@@ -89,6 +78,22 @@
 				<div class="projects__item__buttons__row">
 					<a href="https://yourlangbyrostyslav.netlify.app/"  target="_blank" class="projects__item__button">Site</a>
 					<a href="https://github.com/RostyslavGitHub/The-language-school" target="_blank" class="projects__item__button">Code</a>
+				</div>
+			</div>
+
+			<div class="projects__item">
+				<h2 class="projects__item__title">
+					<a href="https://warwebarchive.netlify.app/" target="_blank">Webarchive of the war in Ukraine</a> / <a href="https://github.com/RostyslavGitHub/Web-Archive-of-the-War" target="_blank">Web-Archive-of-the-War</a>
+				</h2>
+				<p class="projects__item__last-update">
+					Last updated on <span class="--green-marker">May 1, 2023</span>.
+				</p>
+
+				<p class="projects__item__description">This project is an addition to a research paper exploring the role of web archives in information resource services during Russia's war against Ukraine. Its goal is to investigate web archive capabilities and highlight the digital heritage of the conflict.</p>
+
+				<div class="projects__item__buttons__row">
+					<a href="https://warwebarchive.netlify.app/" target="_blank" class="projects__item__button">Site</a>
+					<a href="https://github.com/RostyslavGitHub/Web-Archive-of-the-War" target="_blank" class="projects__item__button">Code</a>
 				</div>
 			</div>
 
@@ -128,12 +133,15 @@
 	</div>
 
 	<div class="contact-form">
-		<h2 class="title">Here you can leave me a <span class="--green-marker"> message</span>.</h2>
+		<div class="contact-form__info">
+			<h2 class="title">Here you can send me a <span class="--green-marker"> message</span>. <br> I'm always open to discuss your projects.</h2>
+			<div class="contact-form__info__mail-me">or mail me at: <a href="mailto:forwork.rostislav@gmail.com" class="contact-form__mail mail"> <br>forwork.rostislav@gmail.com</a></div>
+		</div>
 		<div class="contact-form__container">
-			<form action="" class="contact-form__body">
-				<input type="text" class="contact-form__body__inputs" value="Your name">
-				<input type="text" class="contact-form__body__inputs" value="Your e-mail">
-				<textarea type="text" class="contact-form__body__textarea">Any information you want to share (a job offer, the project details, etc.)</textarea>
+			<form data-netlify="true" action="" class="contact-form__body">
+				<input type="text" name="name:" class="contact-form__body__inputs" value="Your name">
+				<input type="email" name="email:" class="contact-form__body__inputs" value="Your e-mail">
+				<textarea type="text" name="message:" class="contact-form__body__textarea">Any information you want to share (a job offer, the project details, etc.)</textarea>
 				<button class="contact-form__body__button">Submit</button>
 			</form>
 		</div>

@@ -3,13 +3,42 @@
 const burgerMenu = document.querySelector('.header__burger-menu');
 const menu = document.querySelector('.header__nav');
 const body = document.querySelector('.body');
-if (burgerMenu) {
-  burgerMenu.addEventListener('click', function() {
+const closeMenu = () => {
   burgerMenu.classList.toggle('_active-burger-menu');
   menu.classList.toggle('_active-menu');
   body.classList.toggle('_stop-scroll');
+}
+
+if (burgerMenu) {
+  burgerMenu.addEventListener('click', function() {
+  closeMenu();
 });
 }
+
+const navLinks = document.getElementsByClassName("header__nav__link");
+const about = document.querySelector(".about");
+const skills = document.querySelector(".skills");
+const works = document.querySelector(".projects");
+const contact = document.querySelector(".contact-form");
+
+if (navLinks) {
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function() {
+      if (i === 0) {
+        about.scrollIntoView();
+      } else if (i === 1) {
+        skills.scrollIntoView();
+      } else if (i === 2) {
+        works.scrollIntoView();
+      } else if (i === 3) {
+        contact.scrollIntoView();
+      }
+      if (innerWidth < 699)
+      closeMenu();
+    });
+  }
+}
+
 
 const inputElements = document.getElementsByClassName("contact-form__body__inputs");
 const textAreaElement = document.querySelector(".contact-form__body__textarea");
