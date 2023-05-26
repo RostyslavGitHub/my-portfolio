@@ -42,6 +42,7 @@ if (navLinks) {
 
 const inputElements = document.getElementsByClassName("contact-form__body__inputs");
 const textAreaElement = document.querySelector(".contact-form__body__textarea");
+const subminButton = document.querySelector(".contact-form__body__button");
 
 if (inputElements) {
   for (let i = 0; i < inputElements.length; i++) {
@@ -73,4 +74,10 @@ if (textAreaElement) {
       textAreaElement.value = "Any information you want to share (a job offer, the project details, etc.)";
     }
   });
+
+  subminButton.addEventListener("click", function(){
+    textAreaElement.value === "Any information you want to share (a job offer, the project details, etc.)";
+    inputElements[0].value === "Your name";
+    inputElements[1].value === "Your e-mail";
+  })
 }
