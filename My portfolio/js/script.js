@@ -76,8 +76,8 @@ if (textAreaElement) {
   });
 
   subminButton.addEventListener("click", function(){
-    textAreaElement.value === "Any information you want to share (a job offer, the project details, etc.)";
-    inputElements[0].value === "Your name";
-    inputElements[1].value === "Your e-mail";
+    textAreaElement.value = "Any information you want to share (a job offer, the project details, etc.)";
+    inputElements[0].value = "Your name";
+    inputElements[1].value = "Your e-mail";
   })
 }
