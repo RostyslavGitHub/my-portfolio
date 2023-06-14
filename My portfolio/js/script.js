@@ -1,6 +1,6 @@
 "use strict"
 
-const burgerMenu = document.querySelector('.header__burger-menu');
+const burgerMenu = document.querySelector('.burger-menu');
 const menu = document.querySelector('.header__nav');
 const body = document.querySelector('.body');
 const closeMenu = () => {
@@ -15,11 +15,11 @@ if (burgerMenu) {
 });
 }
 
-const navLinks = document.getElementsByClassName("header__nav__link");
+const navLinks = document.getElementsByClassName("header__link");
 const about = document.querySelector(".about");
 const skills = document.querySelector(".skills");
 const works = document.querySelector(".projects");
-const contact = document.querySelector(".contact-form");
+const contact = document.querySelector(".contacts");
 
 if (navLinks) {
   for (let i = 0; i < navLinks.length; i++) {
@@ -40,9 +40,9 @@ if (navLinks) {
 }
 
 
-const inputElements = document.getElementsByClassName("contact-form__body__inputs");
-const textAreaElement = document.querySelector(".contact-form__body__textarea");
-const subminButton = document.querySelector(".contact-form__body__button");
+const inputElements = document.getElementsByClassName("contacts-form__inputs");
+const textAreaElement = document.querySelector(".contacts-form__textarea");
+const subminButton = document.querySelector(".contacts-form__button");
 
 if (inputElements) {
   for (let i = 0; i < inputElements.length; i++) {
@@ -74,10 +74,4 @@ if (textAreaElement) {
       textAreaElement.value = "Any information you want to share (a job offer, the project details, etc.)";
     }
   });
-
-  subminButton.addEventListener("click", function(){
-    textAreaElement.value = "Any information you want to share (a job offer, the project details, etc.)";
-    inputElements[0].value = "Your name";
-    inputElements[1].value = "Your e-mail";
-  })
 }
