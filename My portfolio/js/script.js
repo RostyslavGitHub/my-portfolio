@@ -4,14 +4,30 @@ const burgerMenu = document.querySelector('.burger-menu');
 const menu = document.querySelector('.header__nav');
 const body = document.querySelector('.body');
 const closeMenu = () => {
-  burgerMenu.classList.toggle('_active-burger-menu');
-  menu.classList.toggle('_active-menu');
-  body.classList.toggle('_stop-scroll');
+  burgerMenu.classList.remove('_active-burger-menu');
+  menu.classList.remove('_active-menu');
+  body.classList.remove('_stop-scroll');
 }
 
 if (burgerMenu) {
   burgerMenu.addEventListener('click', function() {
-  closeMenu();
+    burgerMenu.classList.toggle('_active-burger-menu');
+    menu.classList.toggle('_active-menu');
+    body.classList.toggle('_stop-scroll');
+  });
+  
+  burgerMenu.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      burgerMenu.classList.toggle('_active-burger-menu');
+      menu.classList.toggle('_active-menu');
+      body.classList.toggle('_stop-scroll');
+      }
+  });
+
+  document.addEventListener("keydown", function(event) {
+  if (event.key === 'Escape') {
+    closeMenu();
+  }
 });
 }
 
@@ -34,7 +50,23 @@ if (navLinks) {
         contact.scrollIntoView();
       }
       if (innerWidth < 699)
-      closeMenu();
+        closeMenu();
+    });
+    
+    navLinks[i].addEventListener("keydown", function(event) {
+      if (event.key === 'Enter') {
+        if (i === 0) {
+          about.scrollIntoView();
+        } else if (i === 1) {
+          skills.scrollIntoView();
+        } else if (i === 2) {
+          works.scrollIntoView();
+        } else if (i === 3) {
+          contact.scrollIntoView();
+        }
+        if (innerWidth < 699)
+          closeMenu();
+      }
     });
   }
 }
@@ -51,6 +83,7 @@ if (inputElements) {
         inputElements[i].value = "";
       }
     });
+    
     inputElements[i].addEventListener("blur", function() {
       if (inputElements[i].value === "") {
         if (i === 0) {
@@ -69,9 +102,24 @@ if (textAreaElement) {
       textAreaElement.value = "";
     }
   });
+  
   textAreaElement.addEventListener("blur", function() {
     if (textAreaElement.value === "") {
       textAreaElement.value = "Any information you want to share (a job offer, the project details, etc.)";
+    }
+  });
+
+}
+
+const seeEmailProjectsButton = document.querySelector(".email-projects__button");
+const seeEmailProjects = document.querySelector(".see-more");
+if (seeEmailProjects) {
+  seeEmailProjectsButton.addEventListener('click', function() {
+    seeEmailProjects.classList.toggle("_active-see-more");
+    if (seeEmailProjectsButton.textContent === "see email projects") {
+      seeEmailProjectsButton.textContent = "hide email projects";
+    } else {
+      seeEmailProjectsButton.textContent = "see email projects";
     }
   });
 }

@@ -3,7 +3,7 @@
 	<head>
 		<title>Rostyslav's Portfolio</title>
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="img/icons/like.png">
+		<link rel="icon" href="img/icons/folder.svg">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 	</head>
@@ -11,24 +11,25 @@
 	<body class="body">
 <div class="wrapper content"> 
 	<header class="header">
-		<div class="header__nav content">
-			<div class="header__link">Home</div>
-			<div class="header__link">Skills</div>
-			<div class="header__link">Works</div>
-			<div class="header__link">Contact</div>
-		</div>
-		<div class="burger-menu">
+		<div class="burger-menu" tabindex="0">
 			<span class="burger-menu__line line1"></span>
 			<span class="burger-menu__line line2"></span>
 			<span class="burger-menu__line line3"></span>
 			<span class="burger-menu__line line4"></span>
 		</div>
+		<div class="header__nav content">
+			<div class="header__link" tabindex="0" >Home</div>
+			<div class="header__link" tabindex="0">Skills</div>
+			<div class="header__link" tabindex="0">Works</div>
+			<div class="header__link" tabindex="0">Contact</div>
+		</div>
+		
 	</header>
 	<div class="about">		
 		<div class="about__info">
 			<h1>Hi! I'm Rostyslav Zhyravel. <br>
 			And I'm <span class="about_marker green-marker">a front-end developer</span> from Ukraine.</h1>
-			<div class="contact-icoms --on-pc">
+			<div class="contact-icons --on-pc">
 			<a href="https://t.me/rostislavfff" target="_blank"><img src="img/icons/telegram.svg" alt="" class="contact-icons__item"></a>
 			<a href="https://github.com/RostyslavGitHub" target="_blank"><img src="img/icons/github-sign.svg" alt="" class="contact-icons__item"></a>
 		</div>
@@ -37,7 +38,7 @@
 			<img src="img/about__person-img.jpg" alt="" class="about__person-img">
 			<a href="mailto:forwork.rostislav@gmail.com" class="about__mail mail">forwork.rostislav@gmail.com</a>
 		</div>
-		<div class="contact-icoms --on-mobile">
+		<div class="contact-icons --on-mobile">
 			<a href="https://t.me/rostislavfff" target="_blank"><img src="img/icons/telegram.svg" alt="" class="contact-icons__item"></a>
 			<a href="https://github.com/RostyslavGitHub" target="_blank"><img src="img/icons/github-sign.svg" alt="" class="contact-icons__item"></a>
 		</div>
@@ -46,40 +47,54 @@
 		<h2 class="title">My set of <span class="green-marker">skills</span></h2>
 		<ul class="skills__row">
 			<li class="skills__item">Proficient in <span class="green-marker">HTML, CSS, JavaScript</span></li>
-			<li class="skills__item">Have beginer experience with front-end frameworks such as <span class="green-marker">React</span></li>
-			<li class="skills__item">Understanding of <span class="green-marker">responsive design principles</span></li>
+			<li class="skills__item mail-skills">Knowledge on how to create a responsive and cross-platform <span class="green-marker">HTML email</span>
+				<ul class="mail-skills__body">
+					<li class="mail-skills__item">Responsive across all devices.</li>
+					<li class="mail-skills__item">Cross email-client compatibility (including Outlook)</li>
+					<li class="mail-skills__item">Responsive dark/light mode</li>
+					<li class="mail-skills__item">Properly Commented, Nested & 100% Hand-made coding</li>
+				</ul>
+			</li>
+			<li class="skills__item">Have previous experience in creating the <span class="green-marker">WordPress</span> sites.</li>
 			<li class="skills__item">Familiarity with version control systems like <span class="green-marker">Git</span></li>
 			<li class="skills__item">Experience with CSS pre-processors like <span class="green-marker">SASS/SCSS</span></li>
-			<li class="skills__item">Can work with such template engines as <span class="green-marker">PUG</span></li>
+			<li class="skills__item">Can work with such template engines as <span class="green-marker">Jade/PUG</span></li>
 			<li class="skills__item">Familiarity with <span class="green-marker">BEM methodology</span></li>
-			<li class="skills__item">Strong <span class="green-marker">problem-solving and analytical</span> skills</li>
-			<li class="skills__item">Excellent <span class="green-marker">communication and teamwork</span> abilities</li>
+			<li class="skills__item">Understanding of <span class="green-marker">responsive design principles</span></li>
 			<li class="skills__item">Good enough with <span class="green-marker">Photoshop and Figma</span></li>
+			<li class="skills__item">Strong <span class="green-marker">problem-solving and analytical</span> skills</li>
+			
 		</ul>
 	</div>
 
 	<div class="projects">
-		<h1 class="title">
+		<h2 class="title">
 			The <span class="green-marker"> projects </span>I've worked on
-		</h1>
+		</h2>
 
 		<div class="projects__row">
 
 			<div class="projects__item">
-				<h2 class="projects__title">
-					<a href="https://yourlangbyrostyslav.netlify.app/" target="_blank">A language school site</a> / <a href="https://github.com/RostyslavGitHub/The-language-school" target="_blank">The-language-school</a>
-				</h2>
-				<p class="projects__last-update">
-					Last updated on <span class="green-marker">April 26, 2023</span>.
-				</p>
+					<h2 class="projects__title">
+						<a href="https://yourlangbyrostyslav.netlify.app/" target="_blank">Your Lang</a> / <a href="https://github.com/RostyslavGitHub/The-language-school" target="_blank">The-language-school</a>
+					</h2>
+					<p class="projects__last-update">
+						Last updated on <span class="green-marker">April 26, 2023</span>.
+					</p>
 
-				<p class="projects__description">The website of the language school is a dynamic web resource with a user-friendly design and a modular structure. The website successfully implements a popup that leads to a registration form for classes, allowing users to easily and quickly sign up for their desired sessions without unnecessary steps. Additionally, the website features a slider that showcases the school's teachers. </p>
+					<p class="projects__description">The website of the language school is a dynamic web resource with a user-friendly design and a modular structure. The website successfully implements a popup that leads to a registration form for classes, allowing users to easily and quickly sign up for their desired sessions without unnecessary steps. Additionally, the website features a slider that showcases the school's teachers. </p>
 
-				<div class="projects__buttons__row">
-					<a href="https://yourlangbyrostyslav.netlify.app/"  target="_blank" class="projects__button">Site</a>
-					<a href="https://github.com/RostyslavGitHub/The-language-school" target="_blank" class="projects__button">Code</a>
+					<ul class="used-tech">
+					<li class="used-tech__item">SCSS</li>
+					<li class="used-tech__item">JavaScript</li>
+					<li class="used-tech__item">WordPress</li>		
+				</ul>
+
+					<div class="projects__buttons__row">
+						<a href="https://yourlangbyrostyslav.netlify.app/"  target="_blank" class="projects__button">Site</a>
+						<a href="https://github.com/RostyslavGitHub/The-language-school" target="_blank" class="projects__button">Code</a>
+					</div>
 				</div>
-			</div>
 
 			<div class="projects__item">
 				<h2 class="projects__title">
@@ -91,6 +106,12 @@
 
 				<p class="projects__description">This project is an addition to a research paper exploring the role of web archives in information resource services during Russia's war against Ukraine. Its goal is to investigate web archive capabilities and highlight the digital heritage of the conflict.</p>
 
+				<ul class="used-tech">
+					<li class="used-tech__item">SCSS</li>
+					<li class="used-tech__item">JavaScript</li>
+					<li class="used-tech__item">WordPress</li>		
+				</ul>
+
 				<div class="projects__buttons__row">
 					<a href="https://warwebarchive.netlify.app/" target="_blank" class="projects__button">Site</a>
 					<a href="https://github.com/RostyslavGitHub/Web-Archive-of-the-War" target="_blank" class="projects__button">Code</a>
@@ -99,13 +120,20 @@
 
 			<div class="projects__item">
 				<h2 class="projects__title">
-					<a href="https://pizzabyrostyslav.netlify.app/ " target="_blank">A pizza shop site</a> / <a href="https://github.com/RostyslavGitHub/Pizzeria" target="_blank">Pizzeria</a>
+					<a href="https://pizzabyrostyslav.netlify.app/ " target="_blank">The pizza shop site</a> / <a href="https://github.com/RostyslavGitHub/Pizzeria" target="_blank">Pizzeria</a>
 				</h2>
 				<p class="projects__last-update">
 					Last updated on <span class="green-marker">May 21, 2023</span>.
 				</p>
 
 				<p class="projects__description">This online pizzeria site uses the PUG templating engine. It has been utilized to simplify the HTML structure and create reusable components. This ensures a clean and organized codebase, making it easier for to maintain and update the site as needed. Moreover, the separate database of the pizza types allows for easy content addition even for non-technical individuals.</p>
+
+				<ul class="used-tech">
+					<li class="used-tech__item">SCSS</li>
+					<li class="used-tech__item">JavaScript</li>
+					<li class="used-tech__item">WordPress</li>
+					<li class="used-tech__item">Jade/Pug</li>		
+				</ul>
 
 				<div class="projects__buttons__row">
 					<a href="https://pizzabyrostyslav.netlify.app/ " target="_blank" class="projects__button">Site</a>
@@ -115,13 +143,19 @@
 
 			<div class="projects__item">
 				<h2 class="projects__title">
-					<a href="https://travelifebyrostislav.netlify.app/" target="_blank"> A travel community site</a> / <a href="https://github.com/RostyslavGitHub/TraveLife" target="_blank">TraveLife</a>
+					<a href="https://travelifebyrostislav.netlify.app/" target="_blank">The travel community site</a> / <a href="https://github.com/RostyslavGitHub/TraveLife" target="_blank">TraveLife</a>
 				</h2>
 				<p class="projects__last-update">
 					Last updated on <span class="green-marker">February 12, 2023</span>.
 				</p>
 
 				<p class="projects__description">This website is the first project in my portfolio, created with the aim of sharing my passion for travel and my skills in front-end development. My approach to web design is focused on aesthetics and user experience. I create attractive and intuitively understandable interfaces that provide visitors with convenience and satisfaction while browsing the travel blogs.</p>
+
+				<ul class="used-tech">
+					<li class="used-tech__item">SCSS</li>
+					<li class="used-tech__item">JavaScript</li>
+					<li class="used-tech__item">WordPress</li>		
+				</ul>
 
 				<div class="projects__buttons__row">
 					<a href="https://travelifebyrostislav.netlify.app/" target="_blank" class="projects__button">Site</a>
@@ -130,6 +164,39 @@
 			</div>
 
 		</div>	
+
+		
+
+		<div class="email-projects">
+				
+			<div class="see-more projects__row">
+
+				<div class="projects__item">
+					<h2 class="projects__title">
+						<a href="https://emailtemplatebyrostyslav.netlify.app/" target="_blank">Email template</a> / <a href="https://github.com/RostyslavGitHub/two-columns-email-template/tree/main" target="_blank">Two-columns-email-template</a>
+					</h2>
+					<p class="projects__last-update">
+						Last updated on <span class="green-marker">June 30, 2023</span>.
+					</p>
+
+					<p class="projects__description">This email template was made, encompassing all the fundamental rules of email development: table layout, inline CSS, responsiveness across all devices, cross email-client compatibility, and support for light/dark mode. It was a joy to develop, and I took great pride in ensuring its adherence to these standards. </p>
+
+					<ul class="used-tech">
+						<li class="used-tech__item">XHTML</li>	
+					</ul>
+
+					<div class="projects__buttons__row">
+						<a href="https://emailtemplatebyrostyslav.netlify.app/"  target="_blank" class="projects__button">Site</a>
+						<a href="https://github.com/RostyslavGitHub/two-columns-email-template/tree/main" target="_blank" class="projects__button">Code</a>
+					</div>
+				</div>
+
+			</div>
+
+			<button class="email-projects__button">see email projects</button>
+
+		</div>
+
 	</div>
 
 	<div class="contacts">
@@ -141,7 +208,7 @@
 			<form action="index.html" name="contact" data-netlify="true" class="contacts-form">
 				<input type="text" name="name:" class="contacts-form__inputs" value="Your name">
 				<input type="email" name="email:" class="contacts-form__inputs" value="Your e-mail">
-				<textarea type="text" name="message:" class="contacts-form__textarea">Any information you want to share (a job offer, the project details, etc.)</textarea>
+				<textarea id="myTextarea" oninput="resizeTextarea()" type="text" name="message:" class="contacts-form__textarea">Any information you want to share (a job offer, the project details, etc.)</textarea>
 				<button type="submit" class="contacts-form__button">Submit</button>
 			</form>
 		</div>
