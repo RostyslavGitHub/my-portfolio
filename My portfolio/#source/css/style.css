@@ -456,7 +456,7 @@ body {
 
 .skills__item:nth-child(3)::before {
   content: "";
-  background: url(../img/icons/atom.png);
+  background: url(../img/icons/wordpress.png);
   background-size: cover;
 }
 
@@ -618,19 +618,6 @@ body {
 .projects__button {
   margin: 16px 30px 10px 30px;
   min-width: 80px;
-  height: 40px;
-  background-color: #035956;
-  color: #f8f8f8;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.projects__wide-button{
-  margin: 16px 30px 10px 30px;
-  min-width: 140px;
   height: 40px;
   background-color: #035956;
   color: #f8f8f8;
@@ -861,6 +848,8 @@ body {
 }
 
 ._active-see-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 

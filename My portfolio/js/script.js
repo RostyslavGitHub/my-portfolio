@@ -116,10 +116,10 @@ const seeEmailProjects = document.querySelector(".see-more");
 if (seeEmailProjects) {
   seeEmailProjectsButton.addEventListener('click', function() {
     seeEmailProjects.classList.toggle("_active-see-more");
-    if (seeEmailProjectsButton.textContent === "see email projects") {
-      seeEmailProjectsButton.textContent = "hide email projects";
+    if (seeEmailProjectsButton.textContent === "see more projects") {
+      seeEmailProjectsButton.textContent = "hide these projects";
     } else {
-      seeEmailProjectsButton.textContent = "see email projects";
+      seeEmailProjectsButton.textContent = "see more projects";
     }
   });
 }

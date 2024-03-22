@@ -93,8 +93,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
-		.line1 {}
-		.line2 {}
 		.line3{
 			position: relative;
 			bottom: 0px;
@@ -259,8 +257,6 @@ body{
 	position: relative;
 	line-height: 1.1;
 }
-
-.mail-skills {}
 .mail-skills__body {
 	margin-left: 20px;
 }
@@ -299,7 +295,7 @@ body{
 }
 .skills__item:nth-child(3)::before{
 	content: '';
-	background: url(../img/icons/wordpress.png);
+	background: url(../img/icons/atom.png);
 	background-size: cover;
 	@extend %skills__icon; 
 }
@@ -379,7 +375,6 @@ body{
 	display: flex;
   	flex-direction: column;
 	width: 90%;
-	min-height: 410px;
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0.5px 0.5px 3px 0.5px $main-marker-color;
@@ -410,9 +405,6 @@ body{
 	align-self: baseline;
 	flex-wrap: wrap;
 	gap: 10px 20px;
-}
-.used-tech__item{
-	
 }
 .used-tech__item:first-child{
 	margin-left: 0;
@@ -636,7 +628,7 @@ body{
 }
 
 ._active-see-more{
-	display: block;
+	display: flex;
 }
 /* MEDIA */
 @media (min-width: 699px) {
